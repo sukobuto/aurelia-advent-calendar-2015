@@ -1,0 +1,16 @@
+<% extend 'layout' %>
+
+<div style="padding: 200px;">
+	<form action="login" method="post">
+		<p><%= @error %></p>
+		<div class="form-group">
+			<label>ユーザID</label>
+			<input type="text" class="form-control" name="login" value="<%= @login %>">
+		</div>
+		<div class="form-group">
+			<label>パスワード</label>
+			<input type="password" class="form-control" name="password">
+		</div>
+		<input type="submit" class="btn btn-primary btn-lg btn-block" value="ログイン">
+	</form>
+</div>
