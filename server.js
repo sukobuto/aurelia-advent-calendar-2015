@@ -22,12 +22,14 @@ app.use(session({
 // ほんとは DB に格納されてる想定
 // パスワードはハッシュ化しないとだめよ♡
 let accounts = {
-	test01: {
-		name: 'テスト01',
+	okarin: {
+		firstName: '倫太郎',
+		lastName: '岡部',
 		password: 'password'
 	},
-	test02: {
-		name: 'テスト02',
+	kurigohan: {
+		firstName: '栗栖',
+		lastName: '牧瀬',
 		password: 'password'
 	}
 };
@@ -59,6 +61,10 @@ app.post('/login', (req, res) => {
 	req.session.account = account;
 	req.session.token = Math.random().toString(36).slice(2, 22);
 	res.redirect('/');
+});
+app.get('/logout', (req, res) => {
+	req.session.account = null;
+	res.redirect('/login');
 });
 
 /**
