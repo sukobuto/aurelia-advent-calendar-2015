@@ -28,7 +28,7 @@ let accounts = {
 		password: 'password'
 	},
 	kurigohan: {
-		firstName: '栗栖',
+		firstName: '紅莉栖',
 		lastName: '牧瀬',
 		password: 'password'
 	}
